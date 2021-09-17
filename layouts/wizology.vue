@@ -135,6 +135,12 @@ h4 {
   overflow: hidden !important;
   z-index: 2 !important;
 }
+
+.particles-js{
+display: flex;
+    width: 300vw;
+    height: 500vh;
+}
 </style>
 
 
