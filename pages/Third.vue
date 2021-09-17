@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-center space-x-2">
     <table>
-         <tr> <td>  <h4> Dammi ancora un attimo..</h4> </td></tr><br>
+         <tr> <td>  <h4 class="flex justify-center" > Dammi ancora un attimo..</h4> </td></tr><br>
       <tr>
         <td><p class="emoji">&#9803; Cancro </p> </td>
       </tr>

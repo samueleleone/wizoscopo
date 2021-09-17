@@ -3,7 +3,7 @@
   <div class="flex justify-center space-x-2">
    
     <table>
-         <tr> <td>  <h4> Iniziamo.. controlla se lo vedi </h4> </td></tr><br>
+         <tr> <td>  <h4 class="flex justify-center"> Iniziamo.. controlla se lo vedi </h4> </td></tr><br>
     <tr>
         <td><p class="emoji">&#9800; Ariete </p> </td>
       </tr>

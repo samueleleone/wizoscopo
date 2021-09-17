@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-center space-x-2">
     <table>
-         <tr> <td>  <h4> Ancora un piccolo sforzo!</h4> </td></tr><br>
+         <tr> <td>  <h4 class="flex justify-center" > Ancora un piccolo sforzo!</h4> </td></tr><br>
        <tr>
         <td><p class="emoji">&#9808; Sagittario </p> </td>
       </tr>
