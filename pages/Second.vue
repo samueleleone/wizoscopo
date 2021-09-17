@@ -2,9 +2,9 @@
   <div class="flex justify-center space-x-2">
      
     <table>
-        <tr> <td>  <h4> Ottimo lavoro, continua così..</h4> </td></tr><br>
+        <tr> <td>  <h4> Mmh.. capisco </h4> </td></tr><br>
       <tr>
-        <td><p class="emoji">&#9809;  Capricorn </p>  </td>
+        <td><p class="emoji">&#9809;  Capricorno </p>  </td>
       </tr>
       <tr>
         <td><p class="emoji">&#9802; Gemelli </p> </td>
@@ -28,7 +28,7 @@
                <p class="pt-4 text-gray-800 border-t border-dashed"></p>
 
       <tr>
-        <td><p class="flex justify-center">Il tuo segno zodiacale è presente ?</p></td>
+        <td><p class="flex justify-center"> Non sono ancora sicuro, adesso lo vedi ?</p></td>
         <td></td>
       </tr>
    

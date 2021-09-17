@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-center space-x-2">
     <table>
-         <tr> <td>  <h4> Ci siamo quasi..</h4> </td></tr><br>
+         <tr> <td>  <h4> Dammi ancora un attimo..</h4> </td></tr><br>
       <tr>
         <td><p class="emoji">&#9803; Cancro </p> </td>
       </tr>
@@ -21,7 +21,7 @@
                <p class=" pt-4 text-gray-800 border-t border-dashed"></p>
 
       <tr>
-        <td><p class="flex justify-center">Il tuo segno zodiacale è presente ?</p></td>
+        <td><p class="flex justify-center">Ci siamo quasi, dimmi se c'è in ora :</p></td>
         <td></td>
       </tr>
     

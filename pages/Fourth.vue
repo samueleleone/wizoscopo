@@ -22,7 +22,7 @@
                <p class=" pt-4 text-gray-800 border-t border-dashed"></p>
 
       <tr>
-        <td><p class="flex justify-center">Il tuo segno zodiacale è presente ?</p></td>
+        <td><p class="flex justify-center">Ormai ci siamo.. il tuo segno è tra questi? </p></td>
         <td></td>
       </tr>
      
