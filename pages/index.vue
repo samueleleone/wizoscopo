@@ -1,11 +1,11 @@
 <template>
  
    <div>
-        <h4 class="text-2xl leading-7 font-semibold">
-          Indovino al segno zodiacale che stai pensando! &#x1F52E;
+        <h4 class="text-2xl flex justify-center leading-7 font-semibold">
+          L'oroscopo magico &#x1F52E;
         </h4>
-        <p class="mt-3 text-white-600">
-          Non dirmelo, pensalo soltanto e dimmi solo se lo vedi tra le liste che ti propongo
+        <p class="mt-3 flex justify-center text-white-600">
+          Pensa il tuo segno zodiacale
           
     
         </p>

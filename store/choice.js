@@ -3,11 +3,13 @@ export const state = () => ({
     //cnt: 0
   })
 
+ 
   export const mutations = {
     increment_first(state) {
       state.counter = state.counter + 1 
       //state.cnt = state.cnt + 1
     },
+    
      increment_second(state) {
       state.counter = state.counter + 2
       //state.cnt = state.cnt + 1

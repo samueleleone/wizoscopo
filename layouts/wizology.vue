@@ -33,7 +33,7 @@
       rel="stylesheet"
     />
     <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
-      <h1 class="flex justify-center pt-8 sm:pt-0"><nuxt-link to="/">wizology</nuxt-link></h1>
+      <h1 class="flex justify-center pt-8 sm:pt-0"><nuxt-link to="/">wizoscopo</nuxt-link></h1>
 
       <div
         class="
@@ -91,6 +91,7 @@ export default {
 .content {
   z-index: 100;
   position: absolute;
+  
 }
 .panel {
   height: 100vh !important;
@@ -106,12 +107,15 @@ export default {
   background-attachment: fixed !important;
   background-position: fixed !important;
   z-index: -1 !important;
+  
 }
 
 body {
+  
   font-size: 15px !important;
   color: rgb(231, 231, 231);
   font-family: "Montserrat", serif !important;
+
 }
 
 .emoji {
@@ -119,7 +123,7 @@ body {
 }
 
 h1 {
-  font-size: 55px !important;
+  font-size: 42px !important;
   color: white;
   font-family: "Libre Caslon Text", cursive !important;
 }

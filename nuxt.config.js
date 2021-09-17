@@ -1,4 +1,5 @@
 export default {
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Wizology - Indovino a quale segno zodiacale stai pensando',
@@ -23,6 +24,7 @@ export default {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&display=swap'}
     ]
   },
+  
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
@@ -42,6 +44,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/axios'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
