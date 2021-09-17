@@ -37,7 +37,7 @@
 
       <div
         class="
-          mt-8
+          mt-3
           bg-white bg-opacity-30
           overflow-hidden
           shadow
@@ -64,6 +64,10 @@
           </svg>
         </a>
       </div>
+      <div class="flex justify-center pt-4 space-x-2">
+        
+        <p> <a href="https://github.com/wiztoth" target="_blank"> github.com/wiztoth </a></p></div>
+        
     </div>
   </div>
 </div>
@@ -111,13 +115,13 @@ body {
 }
 
 .emoji {
-  font-size: 22px;
+  font-size: 18px;
 }
 
 h1 {
   font-size: 55px !important;
   color: white;
-  font-family: "Julius Sans One", cursive !important;
+  font-family: "Libre Caslon Text", cursive !important;
 }
 
 h4 {

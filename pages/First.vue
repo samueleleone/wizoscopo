@@ -1,9 +1,9 @@
 <template>
 
-  <div class="flex justify-center pt-4 space-x-2">
+  <div class="flex justify-center space-x-2">
    
     <table>
-         <tr> <td>  <h4> Ok, inizia a pensare al tuo segno zodiacale..</h4> </td></tr><br>
+         <tr> <td>  <h4> Iniziamo.. controlla se lo vedi </h4> </td></tr><br>
     <tr>
         <td><p class="emoji">&#9800; Ariete </p> </td>
       </tr>
@@ -21,9 +21,10 @@
       </tr>
          <tr>
         <td><p class="emoji">&#9809; Capricorno </p> </td>
-      </tr>
+      </tr><br>
      
-      <br />
+                   <p class=" pt-4 text-gray-800 border-t border-dashed"></p>
+
       <tr>
         <td>Il tuo segno zodiacale è presente ?</td>
         <td></td>
@@ -33,13 +34,15 @@
      
       
       <tr><td>
+
+        <div class="flex justify-center pt-4 space-x-2">
         <nuxt-link 
-      to="Second"><button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"  @click="addValue" > Si </button></nuxt-link>
+      to="Second"><button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-5 border border-gray-400 rounded shadow"  @click="addValue" > Si </button></nuxt-link>
       <nuxt-link 
-      to="Second"><button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"  @click="incrementZero" > No </button></nuxt-link>
-      
+      to="Second"><button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"  @click="incrementZero" > No</button></nuxt-link>
+        </div>
       </td></tr>
-      <br>
+      
 
     </table>
   </div>

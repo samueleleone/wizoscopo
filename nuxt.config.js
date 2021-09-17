@@ -19,7 +19,8 @@ export default {
       { rel: 'stylesheet', href:'https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap'},
       { rel: 'stylesheet', href:'https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap'},
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Alata&display=swap'},
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Alata&family=Amiri&family=Cormorant+Garamond:wght@300;400&family=Julius+Sans+One&family=Montserrat:wght@300&display=swap'}
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Alata&family=Amiri&family=Cormorant+Garamond:wght@300;400&family=Julius+Sans+One&family=Montserrat:wght@300&display=swap'},
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&display=swap'}
     ]
   },
 
