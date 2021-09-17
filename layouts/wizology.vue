@@ -146,8 +146,8 @@ h4 {
 
 .particles-js{
 display: flex;
-    width: 300vw;
-    height: 500vh;
+    width: 100vw;
+    height: 100vh;
 }
 </style>
 
