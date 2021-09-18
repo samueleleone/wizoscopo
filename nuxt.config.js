@@ -2,7 +2,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Wizology - Indovino a quale segno zodiacale stai pensando',
+    title: 'Wizoscopo - Il tuo oroscopo magico !',
     htmlAttrs: {
       lang: 'it'
     },
