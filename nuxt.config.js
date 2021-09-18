@@ -14,7 +14,7 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
       { rel: 'stylesheet', href:'https://fonts.googleapis.com/css2?family=Neucha&display=swap'},
       { rel: 'stylesheet', href:'https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Mountains+of+Christmas:wght@700&display=swap'},
       { rel: 'stylesheet', href:'https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap'},
