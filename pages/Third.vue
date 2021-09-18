@@ -21,7 +21,7 @@
                <p class=" pt-4 text-gray-800 border-t border-dashed"></p>
 
       <tr>
-        <td><p class="flex justify-center">Ci siamo quasi, dimmi se c'è in ora :</p></td>
+        <td><p class="flex justify-center">Ci siamo quasi, dimmi se c'è ora :</p></td>
         <td></td>
       </tr>
     
