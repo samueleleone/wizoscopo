@@ -1,5 +1,5 @@
 <template>
-
+ <client-only placeholder="Loading...">
   <div>
           {{setSign()}}
          {{ setMessage() }}
@@ -181,6 +181,7 @@
       >
     </div>
   </div>
+ </client-only>
 </template>
 
 <script>

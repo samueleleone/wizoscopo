@@ -12,7 +12,7 @@
        
         <p class="mt-4 pt-4 text-gray-800 border-t border-dashed"></p>
           <div class="flex justify-center pt-2 space-x-2">
-          <nuxt-link to="First"><button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-600 rounded shadow"> Iniziamo! </button></nuxt-link>
+          <nuxt-link to="neptune"><button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-600 rounded shadow"> Iniziamo! </button></nuxt-link>
           </div>
         
    </div>
