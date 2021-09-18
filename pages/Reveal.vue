@@ -8,10 +8,8 @@
     <h4 class="text-2xl leading-7 font-semibold flex justify-center">
       Ho finito!
     </h4>
-    <br />
-    <p class="mt-3 text-white-600lex justify-center">
-      Il segno a cui stai pensando è:
-    </p>
+    
+   
     <br />
 
    
@@ -26,11 +24,10 @@
       <div class="flex justify-center" v-case="1">
         <div>
           <h4 class="flex justify-center">&#9800; Ariete</h4>
-          <br />
           <p class="message">
            
        
-            {{ this.message }}
+            <q> <q>{{ this.message }}</q></q>
           </p>
         </div>
       </div>
@@ -38,11 +35,10 @@
       <div class="flex justify-center" v-case="2">
         <div>
           <h4 class="flex justify-center">&#9801; Toro</h4>
-          <br />
           <p class="message">
            
        
-            {{ this.message }}
+             <q>{{ this.message }}</q>
           </p>
         </div>
       </div>
@@ -50,11 +46,10 @@
       <div class="flex justify-center" v-case="3">
         <div>
           <h4 class="flex justify-center">&#9802; Gemelli</h4>
-          <br />
           <p class="message">
           
        
-            {{ this.message }}
+             <q>{{ this.message }}</q>
           </p>
         </div>
       </div>
@@ -62,11 +57,10 @@
       <div class="flex justify-center" v-case="4">
         <div>
           <h4 class="flex justify-center">&#9803; Cancro</h4>
-          <br />
           <p class="message">
            
        
-            {{ this.message }}
+             <q>{{ this.message }}</q>
           </p>
         </div>
       </div>
@@ -74,11 +68,10 @@
       <div class="flex justify-center" v-case="5">
         <div>
           <h4 class="flex justify-center">&#9804; Leone</h4>
-          <br />
           <p class="message">
            
        
-            {{ this.message }}
+             <q>{{ this.message }}</q>
           </p>
         </div>
       </div>
@@ -86,11 +79,10 @@
       <div class="flex justify-center" v-case="6">
         <div>
           <h4 class="flex justify-center">&#9805; Vergine</h4>
-          <br />
           <p class="message">
           
        
-            {{ this.message }}
+             <q>{{ this.message }}</q>
           </p>
         </div>
       </div>
@@ -98,11 +90,10 @@
       <div class="flex justify-center" v-case="7">
         <div>
           <h4 class="flex justify-center">&#9806; Bilancia</h4>
-          <br />
           <p class="message">
           
        
-            {{ this.message }}
+             <q>{{ this.message }}</q>
           </p>
         </div>
       </div>
@@ -110,11 +101,10 @@
       <div class="flex justify-center" v-case="8">
         <div>
           <h4 class="flex justify-center">&#9810; Acquario</h4>
-          <br />
           <p class="message">
            
        
-            {{ this.message }}
+             <q>{{ this.message }}</q>
           </p>
         </div>
       </div>
@@ -122,11 +112,10 @@
       <div class="flex justify-center" v-case="9">
         <div>
           <h4 class="flex justify-center">&#9808; Sagittario</h4>
-          <br />
           <p class="message">
             
        
-            {{ this.message }}
+             <q>{{ this.message }}</q>
           </p>
         </div>
       </div>
@@ -134,11 +123,10 @@
       <div class="flex justify-center" v-case="10">
         <div>
           <h4 class="flex justify-center">&#9811; Pesci</h4>
-          <br />
           <p class="message">
         
        
-            {{ this.message }}
+             <q>{{ this.message }}</q>
           </p>
         </div>
       </div>
@@ -146,11 +134,10 @@
       <div class="flex justify-center" v-case="11">
         <div>
           <h4 class="flex justify-center">&#9809; Capricorno</h4>
-          <br />
           <p class="message">
            
        
-            {{ this.message }}
+             <q>{{ this.message }}</q>
           </p>
         </div>
       </div>
@@ -158,11 +145,10 @@
       <div class="flex justify-center" v-case="12">
         <div>
           <h4 class="flex justify-center">&#9807; Scorpione</h4>
-          <br />
           <p class="message">
             
        
-            {{ this.message }}
+             <q>{{ this.message }}</q>
           </p>
         </div>
       </div>
@@ -242,7 +228,7 @@ export default {
               this.sign = 'cancer'
             }else{
               if(this.zodiac_sign == 5){
-                this.sign = 'leone'
+                this.sign = 'leo'
               }else{
                 if(this.zodiac_sign == 6){
                   this.sign = 'virgo'
@@ -251,7 +237,7 @@ export default {
                     this.sign = 'libra'
                   }else{
                     if(this.zodiac_sign == 8){
-                      this.sign = 'acquarius'
+                      this.sign = 'aquarius'
                     }else{
                       if(this.zodiac_sign == 9){
                         this.sign = 'sagittarius'
@@ -263,7 +249,7 @@ export default {
                             this.sign = 'capricorn'
                           }else{
                             if(this.zodiac_sign == 12){
-                              this.sign = 'scorpion'
+                              this.sign = 'scorpio'
                             }
                           }
                         }
@@ -285,4 +271,15 @@ export default {
 };
 </script>
 
+
+<style>
+.message{
+font-family: 'Ovo', serif;
+text-align: center;
+font-size: 16px;
+margin: 10px;
+font-style: italic;
+
+}
+</style>
 
