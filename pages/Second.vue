@@ -18,9 +18,7 @@
       <tr>
         <td><p class="emoji">&#9805; Vergine </p> </td>
       </tr>
-         <tr>
-        <td><p class="emoji">&#9808; Sagittario </p> </td>
-      </tr>
+      
       <tr>
         <td><p class="emoji">&#9801; Toro </p> </td>
       </tr>
