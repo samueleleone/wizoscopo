@@ -27,7 +27,7 @@
           <p class="message">
            
          {{ this.timestamp }}<br><br>
-          <q>{{ data[2].message.text }}</q>
+          <q>{{ data.message.text }}</q>
             
            
           </p>
@@ -40,7 +40,7 @@
           <p class="message">
            
         {{ this.timestamp }}<br><br>
-             <q>{{ data[1].message.text }}</q>
+              <q>{{ data.message.text }}</q>
           </p>
         </div>
       </div>
@@ -51,7 +51,7 @@
           <p class="message">
           
         {{ this.timestamp }}<br><br>
-              <q>{{ data[6].message.text }}</q>
+               <q>{{ data.message.text }}</q>
           </p>
         </div>
       </div>
@@ -62,7 +62,7 @@
           <p class="message">
            
         {{ this.timestamp }}<br><br>
-               <q>{{ data[7].message.text }}</q>
+                <q>{{ data.message.text }}</q>
           </p>
         </div>
       </div>
@@ -73,7 +73,7 @@
           <p class="message">
            
         {{ this.timestamp }}<br><br>
-                <q>{{ data[8].message.text }}</q>
+                 <q>{{ data.message.text }}</q>
           </p>
         </div>
       </div>
@@ -84,7 +84,7 @@
           <p class="message">
           
         {{ this.timestamp }}<br><br>
-               <q>{{ data[0].message.text }}</q>
+                <q>{{ data.message.text }}</q>
           </p>
         </div>
       </div>
@@ -95,7 +95,7 @@
           <p class="message">
           
         {{ this.timestamp }}<br><br>
-              <q>{{ data[5].message.text }}</q>          </p>
+               <q>{{ data.message.text }}</q>          </p>
         </div>
       </div>
 
@@ -105,7 +105,7 @@
           <p class="message">
            
         {{ this.timestamp }}<br><br>
-                <q>{{ data[3].message.text }}</q>
+                 <q>{{ data.message.text }}</q>
           </p>
         </div>
       </div>
@@ -116,7 +116,7 @@
           <p class="message">
             
         {{ this.timestamp }}<br><br>
-                <q>{{ data[4].message.text }}</q>
+                 <q>{{ data.message.text }}</q>
           </p>
         </div>
       </div>
@@ -127,7 +127,7 @@
           <p class="message">
         
         {{ this.timestamp }}<br><br>
-              <q>{{ data[9].message.text }}</q>
+               <q>{{ data.message.text }}</q>
           </p>
         </div>
       </div>
@@ -138,7 +138,7 @@
           <p class="message">
            
         {{ this.timestamp }}<br><br>
-               <q>{{ data[10].message.text }}</q>
+                <q>{{ data.message.text }}</q>
           </p>
         </div>
       </div>
@@ -149,7 +149,7 @@
           <p class="message">
             
         {{ this.timestamp }}<br><br>
-             <q>{{ data[11].message.text }}</q>
+             <q>{{ data.message.text }}</q>
           </p>
         </div>
       </div>
@@ -193,6 +193,10 @@ import moment from 'moment'
 Vue.use(VSwitch);
 
 export default {
+    transition: {
+    name: 'home',
+    mode: 'out-in'
+  },
   components: {},
   loading: true,
   data() {
@@ -201,24 +205,86 @@ export default {
       message: "",
       timestamp: moment().lang("it").format('LLLL'),
       zodiac_sign: this.$store.state.choice.counter,
-      
+        virgo : '',
+        taurus : '',
+        aries : '',
+        aquarius :  '',
+        sagittarius :  '',
+        libra:  '',
+        gemini:  '',
+        cancer: '',
+        leo: '',
+        pisces: '',
+        capricorn: '',
+        scorpion: ''
     }
   }, 
-   async asyncData({ nuxt, $axios }) {
-    
-      const virgo = $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/virgo/today') // 0 
-      const taurus = $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/taurus/today') // 1
-      const aries = $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/aries/today') // 2
-      const aquarius = $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/aquarius/today') // 3 
-      const sagittarius = $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/sagittarius/today') // 4
-      const libra = $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/libra/today') // 5
-      const gemini = $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/gemini/today') // 6
-      const cancer = $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/cancer/today') // 7
-      const leo = $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/leo/today') // 8
-      const pisces = $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/pisces/today') // 9
-      const capricorn = $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/capricorn/today') // 10
-      const scorpion = $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/scorpio/today') // 11
-      const data = await Promise.all([virgo,taurus,aries,aquarius,sagittarius,libra,gemini,cancer,leo,pisces,capricorn,scorpion])
+   async asyncData({ store, $axios }) {
+     var data = ''
+
+      if(store.state.choice.counter == 1){
+       data = await $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/aries/today') // 1 
+      }else{
+        if(store.state.choice.counter == 2){
+            data = await $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/taurus/today') // 2
+        }else{
+          if(store.state.choice.counter == 3){
+            data = await $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/gemini/today') // 3
+        }else{
+          if(store.state.choice.counter == 4){
+            data = await $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/cancer/today') // 4
+          }else{
+            if(store.state.choice.counter == 5){
+            data = await $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/leo/today') // 5
+            }else{
+              if(store.state.choice.counter == 6){
+            data = await $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/virgo/today') // 6
+            }else{
+              if(store.state.choice.counter == 7){
+            data = await $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/libra/today') // 7
+
+              }else{
+                if(store.state.choice.counter == 8 ){
+              data = await $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/cancer/today') // 8
+
+                }else{
+                  if(store.state.choice.counter == 9){
+                data = await $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/sagittarius/today') // 9
+
+                  }else{
+                    if(store.state.choice.counter == 10){
+                 data = await $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/pisces/today') // 10
+
+                    }else{
+                      if(store.state.choice.counter == 11){
+                    data = await $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/aquarius/today') // 11
+
+                      }else{
+                        if(store.state.choice.counter == 12){
+                      data = await $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/scorpio/today') // 12
+
+                        }else{
+                          if(store.state.choice.counter == 0 || store.state.choice.counter == 15){
+                          data = await $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/virgo/today') // 4
+
+                          }
+                        }
+                      }
+                    }
+                  }
+
+                }
+              }
+            }
+            }
+          }
+        }
+        }
+     
+      
+      }
+      
+      //const data = await Promise.all([virgo,taurus,aries,aquarius,sagittarius,libra,gemini,cancer,leo,pisces,capricorn,scorpion])
       
       return { 
         data

@@ -1,5 +1,5 @@
 <template>
-
+<transition name="home">
   <div class="flex justify-center space-x-2">
    
     <table>
@@ -46,12 +46,16 @@
 
     </table>
   </div>
+</transition>
 </template>
 
 <script>
 
 export default {
-    
+      transition: {
+    name: 'home',
+    mode: 'out-in'
+  },
       layout: "wizology",
       mounted(){
 

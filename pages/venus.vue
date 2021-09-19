@@ -42,6 +42,10 @@
 
 <script>
 export default {
+    transition: {
+    name: 'home',
+    mode: 'out-in'
+  },
     layout: "wizology",
      data() {
     return {
