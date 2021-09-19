@@ -25,6 +25,7 @@
       sm:items-center
       sm:pt-0
       content
+     
     "
   >
 
@@ -41,7 +42,8 @@
           bg-white bg-opacity-30
           overflow-hidden
           shadow
-          sm:rounded-lg
+           max-w-md
+          rounded-lg
           p-6
         "
       >

@@ -54,7 +54,8 @@ export default {
           },
            incrementZero(){
              this.$store.commit('choice/incrementZero')
-          }
+          },
+          
       }
 };
 </script>

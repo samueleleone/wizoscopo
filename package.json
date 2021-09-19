@@ -12,6 +12,7 @@
     "@nuxtjs/axios": "^5.13.6",
     "core-js": "^3.15.1",
     "http": "0.0.1-security",
+    "moment": "^2.29.1",
     "nuxt": "^2.15.7",
     "sass": "^1.41.0",
     "sass-loader": "^12.1.0",

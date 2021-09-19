@@ -1,8 +1,7 @@
 <template>
  <client-only placeholder="Loading...">
   <div>
-          {{setSign()}}
-         {{ setMessage() }}
+        
          
 
     <h4 class="text-2xl leading-7 font-semibold flex justify-center">
@@ -23,138 +22,140 @@
 
       <div class="flex justify-center" v-case="1">
         <div>
-          <h4 class="flex justify-center">&#9800; Ariete</h4>
+          <h4 class="flex justify-center">&#9800; Ariete</h4><br>
+         
           <p class="message">
            
-       
-            <q> <q>{{ this.message }}</q></q>
+         {{ this.timestamp }}<br><br>
+          <q>{{ data[2].message.text }}</q>
+            
+           
           </p>
         </div>
       </div>
 
       <div class="flex justify-center" v-case="2">
         <div>
-          <h4 class="flex justify-center">&#9801; Toro</h4>
+          <h4 class="flex justify-center">&#9801; Toro</h4><br>
           <p class="message">
            
-       
-             <q>{{ this.message }}</q>
+        {{ this.timestamp }}<br><br>
+             <q>{{ data[1].message.text }}</q>
           </p>
         </div>
       </div>
 
       <div class="flex justify-center" v-case="3">
         <div>
-          <h4 class="flex justify-center">&#9802; Gemelli</h4>
+          <h4 class="flex justify-center">&#9802; Gemelli</h4><br>
           <p class="message">
           
-       
-             <q>{{ this.message }}</q>
+        {{ this.timestamp }}<br><br>
+              <q>{{ data[6].message.text }}</q>
           </p>
         </div>
       </div>
 
       <div class="flex justify-center" v-case="4">
         <div>
-          <h4 class="flex justify-center">&#9803; Cancro</h4>
+          <h4 class="flex justify-center">&#9803; Cancro</h4><br>
           <p class="message">
            
-       
-             <q>{{ this.message }}</q>
+        {{ this.timestamp }}<br><br>
+               <q>{{ data[7].message.text }}</q>
           </p>
         </div>
       </div>
 
       <div class="flex justify-center" v-case="5">
         <div>
-          <h4 class="flex justify-center">&#9804; Leone</h4>
+          <h4 class="flex justify-center">&#9804; Leone</h4><br>
           <p class="message">
            
-       
-             <q>{{ this.message }}</q>
+        {{ this.timestamp }}<br><br>
+                <q>{{ data[8].message.text }}</q>
           </p>
         </div>
       </div>
 
       <div class="flex justify-center" v-case="6">
         <div>
-          <h4 class="flex justify-center">&#9805; Vergine</h4>
+          <h4 class="flex justify-center">&#9805; Vergine</h4><br>
           <p class="message">
           
-       
-             <q>{{ this.message }}</q>
+        {{ this.timestamp }}<br><br>
+               <q>{{ data[0].message.text }}</q>
           </p>
         </div>
       </div>
 
       <div class="flex justify-center" v-case="7">
         <div>
-          <h4 class="flex justify-center">&#9806; Bilancia</h4>
+          <h4 class="flex justify-center">&#9806; Bilancia</h4><br>
           <p class="message">
           
-       
-             <q>{{ this.message }}</q>
-          </p>
+        {{ this.timestamp }}<br><br>
+              <q>{{ data[5].message.text }}</q>          </p>
         </div>
       </div>
 
       <div class="flex justify-center" v-case="8">
         <div>
-          <h4 class="flex justify-center">&#9810; Acquario</h4>
+          <h4 class="flex justify-center">&#9810; Acquario</h4><br>
           <p class="message">
            
-       
-             <q>{{ this.message }}</q>
+        {{ this.timestamp }}<br><br>
+                <q>{{ data[3].message.text }}</q>
           </p>
         </div>
       </div>
 
       <div class="flex justify-center" v-case="9">
         <div>
-          <h4 class="flex justify-center">&#9808; Sagittario</h4>
+          <h4 class="flex justify-center">&#9808; Sagittario</h4><br>
           <p class="message">
             
-       
-             <q>{{ this.message }}</q>
+        {{ this.timestamp }}<br><br>
+                <q>{{ data[4].message.text }}</q>
           </p>
         </div>
       </div>
 
       <div class="flex justify-center" v-case="10">
         <div>
-          <h4 class="flex justify-center">&#9811; Pesci</h4>
+          <h4 class="flex justify-center">&#9811; Pesci</h4><br>
           <p class="message">
         
-       
-             <q>{{ this.message }}</q>
+        {{ this.timestamp }}<br><br>
+              <q>{{ data[9].message.text }}</q>
           </p>
         </div>
       </div>
 
       <div class="flex justify-center" v-case="11">
         <div>
-          <h4 class="flex justify-center">&#9809; Capricorno</h4>
+          <h4 class="flex justify-center">&#9809; Capricorno</h4><br>
           <p class="message">
            
-       
-             <q>{{ this.message }}</q>
+        {{ this.timestamp }}<br><br>
+               <q>{{ data[10].message.text }}</q>
           </p>
         </div>
       </div>
 
       <div class="flex justify-center" v-case="12">
         <div>
-          <h4 class="flex justify-center">&#9807; Scorpione</h4>
+          <h4 class="flex justify-center">&#9807; Scorpione</h4><br>
           <p class="message">
             
-       
-             <q>{{ this.message }}</q>
+        {{ this.timestamp }}<br><br>
+             <q>{{ data[11].message.text }}</q>
           </p>
         </div>
       </div>
 
       <h4 class="flex justify-center" v-case="15">
-        Hai risposto sempre sì, è impossibile!
+        Hai cliccato qualche sì di troppo
       </h4>
     </div>
     <div></div>
@@ -187,87 +188,55 @@
 <script>
 import Vue from "vue";
 import VSwitch from "v-switch-case";
+import moment from 'moment'
 
 Vue.use(VSwitch);
 
 export default {
   components: {},
+  loading: true,
   data() {
     return {
+      sign:"",
       message: "",
-      zodiac_sign_string:"",
-      sign: [""],
+      timestamp: moment().lang("it").format('LLLL'),
       zodiac_sign: this.$store.state.choice.counter,
+      
     }
-  }, layout: "wizology",
-  mounted() {},
+  }, 
+   async asyncData({ nuxt, $axios }) {
+    
+      const virgo = $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/virgo/today') // 0 
+      const taurus = $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/taurus/today') // 1
+      const aries = $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/aries/today') // 2
+      const aquarius = $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/aquarius/today') // 3 
+      const sagittarius = $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/sagittarius/today') // 4
+      const libra = $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/libra/today') // 5
+      const gemini = $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/gemini/today') // 6
+      const cancer = $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/cancer/today') // 7
+      const leo = $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/leo/today') // 8
+      const pisces = $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/pisces/today') // 9
+      const capricorn = $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/capricorn/today') // 10
+      const scorpion = $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/scorpio/today') // 11
+      const data = await Promise.all([virgo,taurus,aries,aquarius,sagittarius,libra,gemini,cancer,leo,pisces,capricorn,scorpion])
+      
+      return { 
+        data
+        }
+    },
+
+  layout: "wizology",
+  mounted() {
+    
+   
+  },
   methods: {
     resetValues() {
       this.$store.commit("choice/reset");
       this.$store.commit("choice/resetClick");
     },
-    async loadData() {
-      var api_url =
-        "https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/" +
-        this.sign +
-        "/today";
-      this.message = await this.$axios
-        .$get(api_url)
-        .then((resp) => (this.message = resp.message.text));
-    },
-    setSign() {
-      if(this.zodiac_sign == 1){
-          this.sign = 'aries';
-      }else{
-        if(this.zodiac_sign == 2){
-          this.sign = 'taurus'
-        }else{
-          if(this.zodiac_sign == 3){
-            this.sign = 'gemini'
-          }else{
-            if(this.zodiac_sign == 4){
-              this.sign = 'cancer'
-            }else{
-              if(this.zodiac_sign == 5){
-                this.sign = 'leo'
-              }else{
-                if(this.zodiac_sign == 6){
-                  this.sign = 'virgo'
-                }else{
-                  if(this.zodiac_sign == 7){
-                    this.sign = 'libra'
-                  }else{
-                    if(this.zodiac_sign == 8){
-                      this.sign = 'aquarius'
-                    }else{
-                      if(this.zodiac_sign == 9){
-                        this.sign = 'sagittarius'
-                      }else{
-                        if(this.zodiac_sign == 10){
-                          this.sign = 'pisces'
-                        }else{
-                          if(this.zodiac_sign == 11){
-                            this.sign = 'capricorn'
-                          }else{
-                            if(this.zodiac_sign == 12){
-                              this.sign = 'scorpio'
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-        
-    },
-    setMessage() {
-      this.loadData();
-    },
+    
+ 
   },
 };
 </script>
@@ -277,8 +246,8 @@ export default {
 .message{
 font-family: 'Ovo', serif;
 text-align: center;
-font-size: 16px;
-margin: 10px;
+font-size: 15px;
+margin: 5px;
 font-style: italic;
 
 }

@@ -253,7 +253,7 @@ export default {
 <style>
 .particles-js-canvas-el {
   height: ;
-  background-color: rgb(35, 6, 46);
+  background-color: rgb(13, 7, 24);
   -ms-transform: scale(1);
   -webkit-transform: scale(1);
   transform: scale(1);

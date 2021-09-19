@@ -43,22 +43,36 @@
 <script>
 export default {
     layout: "wizology",
+     data() {
+    return {
+     
+      zodiac_sign: this.$store.state.choice.counter,
+    }
+    },
     mounted(){
 
       },
       methods: {
           addValue(){
               this.$store.commit('choice/increment_fourth')
+             
+              
+
+             
           },
             resetClick(){
               this.$store.commit('choice/resetClick')
           },
            incrementZero(){
              this.$store.commit('choice/incrementZero')
+             console.log(zodiac_sign)
           },
            incrementZero(){
              this.$store.commit('choice/incrementZero')
-          }
+          },
+         
+      
+          
       }
 };
 </script>

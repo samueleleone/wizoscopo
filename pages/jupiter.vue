@@ -2,7 +2,7 @@
   <div class="flex justify-center space-x-2">
      
     <table>
-        <tr> <td>  <h4 class="flex justify-center" > Mmh.. capisco </h4> </td></tr><br>
+        <tr> <td>  <h4 class="flex justify-center" > Ho capito.. continuiamo </h4> </td></tr><br>
       <tr>
         <td><p class="emoji">&#9809;  Capricorno </p>  </td>
       </tr>

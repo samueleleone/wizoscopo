@@ -1,10 +1,14 @@
 export const state = () => ({
     counter: 0,
     //cnt: 0
+    
   })
 
  
   export const mutations = {
+    addSign(state, sign) {
+      state.sign.push(sign)
+    },
     increment_first(state) {
       state.counter = state.counter + 1 
       //state.cnt = state.cnt + 1
@@ -33,6 +37,7 @@ export const state = () => ({
     },
     incrementZero(state){
       state.counter = state.counter + 0
-    }
+    },
+
   }
 
