@@ -1,0 +1,67 @@
+   
+      if(store.state.choice.reveal == 1){
+       data = await $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/aries/today') // 1 
+      }else{
+        if(store.state.choice.reveal == 2){
+            data = await $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/taurus/today') // 2
+        }else{
+          if(store.state.choice.reveal == 3){
+            data = await $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/gemini/today') // 3
+        }else{
+          if(store.state.choice.reveal == 4){
+            data = await $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/cancer/today') // 4
+          }else{
+            if(store.state.choice.reveal == 5){
+            data = await $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/leo/today') // 5
+            }else{
+              if(store.state.choice.reveal == 6){
+            data = await $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/virgo/today') // 6
+            }else{
+              if(store.state.choice.reveal == 7){
+            data = await $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/libra/today') // 7
+
+              }else{
+                if(store.state.choice.reveal == 8 ){
+              data = await $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/cancer/today') // 8
+
+                }else{
+                  if(store.state.choice.reveal == 9){
+                data = await $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/sagittarius/today') // 9
+
+                  }else{
+                    if(store.state.choice.reveal == 10){
+                 data = await $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/pisces/today') // 10
+
+                    }else{
+                      if(store.state.choice.reveal == 11){
+                    data = await $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/aquarius/today') // 11
+
+                      }else{
+                        if(store.state.choice.reveal == 12){
+                      data = await $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/scorpio/today') // 12
+
+                        }else{
+                          if(store.state.choice.reveal == 0 || store.state.choice.reveal == 15){
+                          data = await $axios.$get('https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolofox/virgo/today') // 4
+
+                          }
+                        }
+                      }
+                    }
+                  }
+
+                }
+              }
+            }
+            }
+          }
+        }
+        }
+     
+      
+      }
+      
+      //const data = await Promise.all([virgo,taurus,aries,aquarius,sagittarius,libra,gemini,cancer,leo,pisces,capricorn,scorpion])
+
+
+ 

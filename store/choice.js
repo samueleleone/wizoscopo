@@ -2,6 +2,7 @@ export const state = () => ({
     counter: 0,
     //cnt: 0
     step: 0,
+    reveal : 0,
   })
 
  
@@ -42,6 +43,9 @@ export const state = () => ({
     increment_step(state){
       state.step = state.step + 1
     },
+    setReveal(state){
+      state.reveal = state.counter
+    }
 
 
   }
