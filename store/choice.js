@@ -1,7 +1,7 @@
 export const state = () => ({
     counter: 0,
     //cnt: 0
-    
+    step: 0,
   })
 
  
@@ -30,6 +30,7 @@ export const state = () => ({
     },
     reset(state){
       state.counter = 0
+      state.step = 0
       //state.cnt = 0
     },
     resetClick(state){
@@ -38,6 +39,10 @@ export const state = () => ({
     incrementZero(state){
       state.counter = state.counter + 0
     },
+    increment_step(state){
+      state.step = state.step + 1
+    },
+
 
   }
 

@@ -35,12 +35,7 @@
       
       <tr><td>
 
-        <div class="flex justify-center pt-4 space-x-2">
-        <nuxt-link 
-      to="jupiter"><button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-5 border border-gray-400 rounded shadow"  @click="addValue" > Si </button></nuxt-link>
-      <nuxt-link 
-      to="jupiter"><button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"  @click="incrementZero" > No</button></nuxt-link>
-        </div>
+      
       </td></tr>
       
 
@@ -70,7 +65,10 @@ export default {
           },
           incrementZero(){
              this.$store.commit('choice/incrementZero')
-          }
+          },
+               nextPage() {
+      this.$store.commit("choice/increment_step");
+    }
       },
       
      
