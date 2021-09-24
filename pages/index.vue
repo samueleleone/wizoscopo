@@ -185,8 +185,7 @@
          </div>
 
           <div v-case="5">
-           Step da store:    {{ this.$store.state.choice.step }}<br>
-      Risposte tot: {{ this.$store.state.choice.counter }}<br>
+    
       <div class="revealation">
 
          <client-only placeholder="Loading...">
