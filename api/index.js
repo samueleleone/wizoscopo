@@ -4,6 +4,7 @@ const request = require('request');
 const cheerio = require('cheerio');
 const expressPrettier = require('express-prettier')
 
+
 const moment = require('moment');
 var fs = require('fs');
 const { html } = require('cheerio/lib/api/manipulation');
@@ -218,6 +219,8 @@ app.get('/horoscope', function (req, res) {
 
 
 });
+
+
 
 
 module.exports = {
