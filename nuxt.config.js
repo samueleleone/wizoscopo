@@ -41,7 +41,7 @@ export default {
   components: true,
 
   loading: {
-    color: 'blue',
+    color: ' #8533ff',
     height: '5px'
   },
 

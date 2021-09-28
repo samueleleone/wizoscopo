@@ -31,7 +31,45 @@
 
      
         </td></tr>
+            <div class="flex justify-center pt-4 space-x-2">
+          <nuxt-link to="/magic">
+          <button
+            class="
+              bg-white
+              hover:bg-gray-100
+              text-gray-800
+              font-semibold
+              py-2
+              px-5
+              border border-gray-400
+              rounded
+              shadow
+            "
+            @click="addValue_fourth"
+          >
+            Si
+          </button> </nuxt-link>
+           <nuxt-link to="/magic">
+          <button
+            class="
+              bg-white
+              hover:bg-gray-100
+              text-gray-800
+              font-semibold
+              py-2
+              px-4
+              border border-gray-400
+              rounded
+              shadow
+            "
+            @click="incrementZero"
+          >
+            No
+          </button>
+          </nuxt-link>
+        </div>
     </table>
+  
   </div>
 </template>
 
@@ -59,6 +97,12 @@ export default {
 
              
           },
+             addValue_fourth() {
+      this.$store.commit("choice/increment_fourth")
+      
+     
+    },
+
             resetClick(){
               this.$store.commit('choice/resetClick')
           },
