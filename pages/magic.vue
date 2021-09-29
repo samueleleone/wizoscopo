@@ -97,7 +97,7 @@ export default {
     
       var url =
       "https://wizapi.vercel.app/api/horoscope?sign=" +
-      store.state.choice.sign;
+      store.state.choice.sign+'&astrologer=brezsny';
 
     console.log(store.state.choice.sign);
 
