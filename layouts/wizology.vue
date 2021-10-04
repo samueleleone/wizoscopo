@@ -1,4 +1,7 @@
 <template>
+
+      <v-app  style="background-color: rgba(0,0,0,0); color: #fff; min-height:100vh;   font-family: 'Montserrat' !important;
+">
 <div>
     <div class="panel">
       <client-only>
@@ -24,6 +27,7 @@
       min-h-screen
       sm:items-center
       sm:pt-0
+      
       content
      
     "
@@ -73,6 +77,7 @@
     </div>
   </div>
 </div>
+ </v-app>
 </template>
 
 
@@ -89,7 +94,12 @@ export default {
 
 
 <style>
-
+.v-application p {
+    margin-bottom: 5px;
+}
+.v-application a {
+    color: #fff;
+}
 .content {
   z-index: 100;
   position: absolute;

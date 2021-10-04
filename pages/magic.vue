@@ -3,27 +3,47 @@
         
      
 
-    <h4 class="text-2xl leading-7 font-semibold flex justify-center">
-      Ho finito!
-    </h4>
+ 
    
    
-    <br />
-
    <div v-switch="this.$store.state.choice.error">
       <div class="flex justify-center" v-case="0">
         <div>
           <h4 class="flex justify-center">{{ this.$store.state.choice.display_sign }} </h4><br>
-          <p class="message">
+          <p v-if="this.astrologer == true" class="message">
             
-          valido dal {{ json.start_date }} al {{ json.end_date }}<br><br>
+          valido dal {{ json_brezsny.start_date }} al {{ json_brezsny.end_date }}<br><br>
            
-        
+
               
-          <q>{{ json.prediction }}</q><br><br>
+          <q>{{ json_brezsny.prediction }}</q><br><br>
            <i>Rob Breszny </i>
-       
+      <br><br>
+     
+            
+
           </p>
+
+           <p v-if="this.astrologer == false" class="message">
+            
+          {{ json_fox.today }}<br><br>
+           
+
+              
+          <q>{{ json_fox.prediction }}</q><br><br>
+           <i>Paolo Fox </i>
+
+     <br><br>
+            Cielo Settimanale?
+
+          </p>  
+                 <div class="flex justify-center">
+            
+
+                      <v-switch  color="white" inset v-model="astrologer"></v-switch>
+           
+          
+                 </div>
         </div>
       </div>
 
@@ -66,6 +86,7 @@
         </button></nuxt-link
       >
     </div>
+           
   </div>
 
 
@@ -78,6 +99,15 @@ import VSwitch from 'v-switch-case'
 Vue.use(VSwitch);
 
 export default {
+  data() {
+    return {
+      astrologer: false,
+      
+     
+    }
+  }, 
+
+   
   layout: "wizology",
   methods: {
     resetValues() {
@@ -88,28 +118,36 @@ export default {
       this.$store.commit("choice/setSign");
     },
   },
+   
   async asyncData({ store, $axios }) {
 
-    var json = {};
-    
+    var json_brezsny = {};
+    var json_fox ={};
     store.commit("choice/setSign");
   
     
-      var url =
+      var url_brezsny =
       "https://foxapi.vercel.app/api/horoscope?sign=" +
       store.state.choice.sign+'&astrologer=brezsny';
 
-    console.log(store.state.choice.sign);
 
+
+      var url_fox = "https://foxapi.vercel.app/api/horoscope?sign=" +
+      store.state.choice.sign+'&astrologer=fox';
     
 
-    json = await $axios.$get(url);
-    
+    json_brezsny = await $axios.$get(url_brezsny);
+    json_fox = await $axios.$get(url_fox)
     
 
     return {
-      json,
+      json_brezsny,
+      json_fox
     };
   },
 };
 </script>
+<style>
+
+
+</style>

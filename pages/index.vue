@@ -216,7 +216,10 @@ export default {
 
 
 <style>
+
+
 .message{
+
 font-family: 'Ovo', serif;
 text-align: center;
 font-size: 15px;
