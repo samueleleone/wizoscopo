@@ -101,7 +101,7 @@ Vue.use(VSwitch);
 export default {
   data() {
     return {
-      astrologer: false,
+      astrologer: true,
       
      
     }
