@@ -30,20 +30,25 @@
            
 
               
-          <q>{{ json_fox.prediction }}</q><br><br>
+          <q>
+            {{ json_fox.message.text }}
+            
+          </q><br><br>
            <i>Paolo Fox </i>
 
      <br><br>
-            Cielo Settimanale?
+     <!-- SWITCH BREZSNY DA FIXARE -->
+         <!-- Cielo Settimanale?-->
 
           </p>  
-                 <div class="flex justify-center">
+                <!-- <div class="flex justify-center">
             
 
                       <v-switch  color="white" inset v-model="astrologer"></v-switch>
            
           
                  </div>
+                -->
         </div>
       </div>
 
@@ -101,7 +106,7 @@ Vue.use(VSwitch);
 export default {
   data() {
     return {
-      astrologer: true,
+      astrologer: false,
       
      
     }
@@ -135,7 +140,8 @@ export default {
       //var url_fox = "https://foxapi.vercel.app/api/horoscope?sign=" +
       //store.state.choice.sign+'&astrologer=fox';
     
-      var url_fox = "https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolo/"+store.state.choice.sign+"/today"
+      // utilizzo un provider già stabile finchè il mio non andrà a regime
+      var url_fox = "https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolo/"+store.state.choice.sign_en+"/today"
 
     json_brezsny = await $axios.$get(url_brezsny);
     json_fox = await $axios.$get(url_fox)
