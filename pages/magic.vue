@@ -132,9 +132,10 @@ export default {
 
 
 
-      var url_fox = "https://foxapi.vercel.app/api/horoscope?sign=" +
-      store.state.choice.sign+'&astrologer=fox';
+      //var url_fox = "https://foxapi.vercel.app/api/horoscope?sign=" +
+      //store.state.choice.sign+'&astrologer=fox';
     
+      var url_fox = "https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolo/"+store.state.choice.sign+"/today"
 
     json_brezsny = await $axios.$get(url_brezsny);
     json_fox = await $axios.$get(url_fox)
