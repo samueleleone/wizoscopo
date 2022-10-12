@@ -72,7 +72,7 @@
       </div>
       <div class="flex justify-center pt-4 space-x-2">
         
-        <p> <a href="https://github.com/wiztoth" target="_blank"> github.com/wiztoth </a></p></div>
+        <p> <a href="https://github.com/samueleleone" target="_blank"> github.com/samueleleone </a></p></div>
         
     </div>
   </div>
