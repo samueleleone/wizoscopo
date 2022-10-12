@@ -12,11 +12,11 @@
           <h4 class="flex justify-center">{{ this.$store.state.choice.display_sign }} </h4><br>
           <p v-if="this.astrologer == true" class="message">
             
-          valido dal {{ json_brezsny.start_date }} al {{ json_brezsny.end_date }}<br><br>
+          valido dal {{ json.start_date }} al {{ json.end_date }}<br><br>
            
 
               
-          <q>{{ json_brezsny.prediction }}</q><br><br>
+          <q>{{ json.prediction }}</q><br><br>
            <i>Rob Breszny </i>
       <br><br>
      
@@ -26,16 +26,16 @@
 
            <p v-if="this.astrologer == false" class="message">
             
-          {{ json_fox.today }}<br><br>
+          Valido da {{ json.start_date }} a {{ json.end_date }}<br><br>
            
 
               
           <q>
-            {{ json_fox.message.text }}
+            {{ json.prediction }}
             
           </q><br><br>
-           <i>Paolo Fox </i>
-
+           <i>Brezsny</i>
+        
      <br><br>
      <!-- SWITCH BREZSNY DA FIXARE -->
          <!-- Cielo Settimanale?-->
@@ -106,7 +106,7 @@ Vue.use(VSwitch);
 export default {
   data() {
     return {
-      astrologer: false,
+      astrologer: false
       
      
     }
@@ -126,30 +126,22 @@ export default {
    
   async asyncData({ store, $axios }) {
 
-    var json_brezsny = {};
-    var json_fox ={};
+    var json = {};
+   
     store.commit("choice/setSign");
   
     
-      var url_brezsny =
+      var url=
       "https://foxapi.vercel.app/api/horoscope?sign=" +
       store.state.choice.sign+'&astrologer=brezsny';
 
 
-
-      //var url_fox = "https://foxapi.vercel.app/api/horoscope?sign=" +
-      //store.state.choice.sign+'&astrologer=fox';
-    
-      // utilizzo un provider già stabile finchè il mio non andrà a regime
-      var url_fox = "https://gbt28i645g.execute-api.eu-west-1.amazonaws.com/dev/paolo/"+store.state.choice.sign_en+"/today"
-
-    json_brezsny = await $axios.$get(url_brezsny);
-    json_fox = await $axios.$get(url_fox)
+    json = await $axios.$get(url);
     
 
     return {
-      json_brezsny,
-      json_fox
+      json,
+      
     };
   },
 };
